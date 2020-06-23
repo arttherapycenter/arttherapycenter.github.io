@@ -1402,7 +1402,7 @@ input.asp-input::placeholder, textarea.asp-input::placeholder {
   margin: 10px auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  max-width: 1300px;
+  max-width: 98%;
   max-height: 98%;
   width: auto;
 }
