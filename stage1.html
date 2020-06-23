@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-AU" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Stage1 - Children Art Therapy Centre</title>
+
+      <link rel="stylesheet" href="application.min.css" type="text/css" media="screen">
+
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="stylesheet" id="shop-page-wp-grid-css" href="shop-page-wp-grid.css" type="text/css" media="all">
+<link rel="stylesheet" id="shop-page-wp-base-styles-css" href="shop-page-wp-base-styles.css" type="text/css" media="all">
+
+</head>
+
+<body class="page-template page-template-page-templates page-template-home page-template-page-templateshome-php page page-id-5">
+<script type="text/javascript">
+  // hide body until dom is ready, but only for browsers that support JS
+  //document.body.className = document.body.className + ' is-loading';
+</script>
+<div class="fixed-gradient">
+  <div class="keyframe-container-upper">
+    <div class="gradient upper-gradient red" style="transform: translate3d(1.91291%, 1.2129%, 0px); opacity: 0.766452;"></div>
+  </div>
+  <div class="keyframe-container-middle">
+    <div class="gradient middle-gradient red" style="transform: translate3d(-1.91291%, 1.2129%, 0px); opacity: 0.766452;"></div>
+  </div>
+  <div class="keyframe-container-lower">
+    <div class="gradient lower-gradient red" style="transform: translate3d(1.91291%, -1.2129%, 0px); opacity: 0.766452;"></div>
+  </div>
+</div>
+
+
+<div class="wrap">
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header-links">
+        <a class="site-header-logo" href="#">Children Art Therapy Centre</a>
+        <a href="#" class="site-menu-burger"><i></i></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+
+<div class="container studio">
+	<div class="content-block">
+    <h1 class="h1 mb1">Stage 1</h1>
+    <div class="h2" style="margin-bottom: 30px;">"Trauma does not ordinarily get better by it self it burrows down further and further under the child's defenses and coping strategies"</div>
+    <div id="slides-container" style="height: 100px; width:100%; border: 2px solid black; overflow: hidden;">
+    	<div id="slides" style="height:100%; background-color: white;position: relative; display: inline-flex">
+    		<img id="img1" src="./stage1/1.jpg" style="height: 100%; width: auto; display: inline-table;" />
+    		<img id="img2" src="./stage1/2.jpg" style="height: 100%; width: auto; display: inline-table;" />
+    		<img id="img3" src="./stage1/3.jpg" style="height: 100%; width: auto; display: inline-table;" />
+    		<img id="img4" src="./stage1/4.jpg" style="height: 100%; width: auto; display: inline-table;" />
+    		<img id="img5" src="./stage1/5.jpg" style="height: 100%; width: auto; display: inline-table;" />
+    		<img id="img6" src="./stage1/6.jpg" style="height: 100%; width: auto; display: inline-table;" />
+    	</div>
+    </div>
+    <div class="button-container" id="btn-next" style="margin-top: 30px; display: none;opacity: 0.0;">
+         <a href="./stage2.html" class="box-button">Move to Stage 2</a>
+	</div>
+</div>
+</div>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer-links">
+        <a class="site-footer-logo" href="#">Children Art Therapy Centre</a>
+      </div>
+    </div>
+  </footer>
+
+  </div> <!-- .main -->
+</div> <!-- .wrap -->
+  <script src="bundle.min.js" type="text/javascript"></script>
+  <script src="pauseresume.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		var num = 0;
+
+  		ab();
+
+      $( window ).resize(function() {ab();});
+
+      $( '#img1' ).load(function() {num++; if (num==6){play_img();}});
+      $( '#img2' ).load(function() {num++; if (num==6){play_img();}});
+      $( '#img3' ).load(function() {num++; if (num==6){play_img();}});
+      $( '#img4' ).load(function() {num++; if (num==6){play_img();}});
+      $( '#img5' ).load(function() {num++; if (num==6){play_img();}});
+      $( '#img6' ).load(function() {num++; if (num==6){play_img();}});
+
+      function ab(){
+      	$('#slides-container').height($('#slides-container').width());
+      }
+
+
+    $("#slides").hover(function(){
+    	$(this).pause();
+	}, function() {
+    	$(this).resume();
+	});
+
+      function play_img() {
+      	var length = $('#img1').width() + $('#img2').width() +$('#img3').width()+$('#img4').width()+$('#img5').width()+$('#img6').width() - $('#slides-container').height();
+      $("#slides").animate({right: length + 'px'},120000,'linear',function(){$('#btn-next').show();$('#btn-next').animate({opacity:1},'slow');});
+      }
+	});
+  </script>
+</body></html>

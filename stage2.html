@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-AU" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Stage2 - Children Art Therapy Centre</title>
+
+      <link rel="stylesheet" href="application.min.css" type="text/css" media="screen">
+
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="stylesheet" id="shop-page-wp-grid-css" href="shop-page-wp-grid.css" type="text/css" media="all">
+<link rel="stylesheet" id="shop-page-wp-base-styles-css" href="shop-page-wp-base-styles.css" type="text/css" media="all">
+
+</head>
+
+<body class="page-template page-template-page-templates page-template-home page-template-page-templateshome-php page page-id-5">
+<div class="fixed-gradient">
+  <div class="keyframe-container-upper">
+    <div class="gradient upper-gradient red" style="transform: translate3d(1.91291%, 1.2129%, 0px); opacity: 0.766452;"></div>
+  </div>
+  <div class="keyframe-container-middle">
+    <div class="gradient middle-gradient red" style="transform: translate3d(-1.91291%, 1.2129%, 0px); opacity: 0.766452;"></div>
+  </div>
+  <div class="keyframe-container-lower">
+    <div class="gradient lower-gradient red" style="transform: translate3d(1.91291%, -1.2129%, 0px); opacity: 0.766452;"></div>
+  </div>
+</div>
+<div id="imgDetail" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" id="modal-content-id">
+    <span class="close" id="close-modal">&times;</span>
+    <img id="img-in-detial" scr="#" style="max-height: calc(100vh - 150px);"/>
+
+    <div style="display: block;margin-top: 10px;text-align: center;">
+    <div class="button-container" id="btn-pre-img" style="display: inline-block;">
+         <a class="box-button">Previous</a>
+  </div>
+  <div class="button-container" id="btn-next-img" style="display: inline-block;">
+         <a class="box-button">Next</a>
+  </div>
+</div>
+  </div>
+
+</div>
+
+<div class="wrap">
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header-links">
+        <a class="site-header-logo" href="./index.html">Children Art Therapy Centre</a>
+        <a href="#" class="site-menu-burger"><i></i></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+
+<div class="container studio">
+	<div class="content-block">
+    <h1 class="h1 mb1">Stage 2</h1>
+    <div class="h2" style="margin-bottom: 30px;">ART IS DEPPER THAN WORDS.</div>
+    <ul class="teachers-list" id="lists">
+                  <li class="teachers-list-item">
+                    <img id="img1" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-1.jpg" />
+        </li>
+              <li class="teachers-list-item">
+                    <img id="img2" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-2.jpg" />
+        </li>
+        <li class="teachers-list-item">
+                    <img id="img3" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-3.jpg" />
+        </li>
+        <li class="teachers-list-item">
+                    <img id="img4" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-4.jpg" />
+        </li>
+        <li class="teachers-list-item">
+                    <img id="img5" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-5.jpg" />
+        </li>
+        <li class="teachers-list-item">
+                    <img id="img6" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-6.jpg" />
+        </li>
+        <li class="teachers-list-item">
+                    <img id="img7" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-7.jpg" />
+        </li>
+        <li class="teachers-list-item">
+                    <img id="img8" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-8.jpg" />
+        </li>
+        <li class="teachers-list-item">
+                    <img id="img9" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-9.jpg" />
+        </li>
+        <li class="teachers-list-item">
+                    <img id="img10" style="cursor: pointer;" class="teachers-list-item-image" src="./stage2/pre a4-10.jpg" />
+        </li>
+            </ul>
+
+    <div class="button-container" style="margin-top: 30px; ">
+         <a href="./stage3.html" class="box-button">Move to Stage 3</a>
+	</div>
+</div>
+</div>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer-links">
+        <a class="site-footer-logo" href="#">Children Art Therapy Centre</a>
+      </div>
+    </div>
+  </footer>
+
+  </div> <!-- .main -->
+</div> <!-- .wrap -->
+  <script src="bundle.min.js" type="text/javascript"></script>
+  <script src="pauseresume.js"></script>
+  <script type="text/javascript">
+    var num = 0;
+
+  	$(document).ready(function() {
+  		$("#lists").on("click", "img", function (event) {
+        $('#img-in-detial').attr("src",event.currentTarget.src);
+        $('#btn-pre-img').show();
+        $('#btn-next-img').show();
+        if (event.currentTarget.src.slice(event.currentTarget.src.length - 6) == '-1.jpg')
+          $('#btn-pre-img').hide();
+        if (event.currentTarget.src.slice(event.currentTarget.src.length - 6) == '10.jpg')
+          $('#btn-next-img').hide();
+
+        $('#imgDetail').show();
+        $('#modal-content-id').css({ opacity: 0.0 });
+        $('#modal-content-id').css({ top: '-300px' });
+        $('#modal-content-id').width($('#img-in-detial').width()+20);
+        $('#modal-content-id').animate({opacity:1.0,top:"+=300"},'slow');
+});
+
+      $( "#close-modal" ).on( "click", function() {
+        $('#imgDetail').hide();
+      });
+
+      $('#btn-next-img').on('click',function(){
+        var oldpath = $('#img-in-detial').attr('src');
+        var newNum = parseInt(oldpath.split('-').pop().split('.')[0],10) + 1;
+        $('#img-in-detial').attr('src','./stage2/pre a4-' + newNum + '.jpg');
+        if (newNum > 1){
+          $('#btn-pre-img').show();
+          $('#btn-next-img').show();
+        }
+        if (newNum == 10){
+          $('#btn-next-img').hide();
+        }
+        if (newNum == 1) {
+          $('#btn-pre-img').hide();
+        }
+      });
+
+      $('#btn-pre-img').on('click',function(){
+        var oldpath = $('#img-in-detial').attr('src');
+        var newNum = parseInt(oldpath.split('-').pop().split('.')[0],10) - 1;
+        $('#img-in-detial').attr('src','./stage2/pre a4-' + newNum + '.jpg');
+        if (newNum > 1){
+          $('#btn-pre-img').show();
+          $('#btn-next-img').show();
+        }
+        if (newNum == 10){
+          $('#btn-next-img').hide();
+        }
+        if (newNum == 1) {
+          $('#btn-pre-img').hide();
+        }
+      });
+
+window.onclick = function(event) {
+  if (event.target == document.getElementById("imgDetail")) {
+    $('#imgDetail').hide();
+  }
+
+}
+
+	});
+  </script>
+</body></html>
